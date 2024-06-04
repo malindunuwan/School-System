@@ -3,6 +3,7 @@ package Code;
 
 import com.mysql.jdbc.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 
 
 public class DBconnect {
@@ -14,7 +15,7 @@ public class DBconnect {
             Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:4306/sms", "root", "");
             return con;
         }
-        catch(Exception e)
+        catch(ClassNotFoundException | SQLException e)
         {
             System.out.println(e);
             return null;

@@ -5,6 +5,13 @@
 package Int;
 
 import static java.lang.System.load;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import static javax.swing.JOptionPane.showMessageDialog;
 
 /**
  *
@@ -33,8 +40,8 @@ public class Login_page extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jPasswordFieldLogin = new javax.swing.JPasswordField();
-        jtxtUserName = new javax.swing.JTextField();
+        jPassword = new javax.swing.JPasswordField();
+        jtxtEmail = new javax.swing.JTextField();
         jbtnCancel = new javax.swing.JButton();
         jbtnSignin = new javax.swing.JButton();
         jbtnlogin = new javax.swing.JButton();
@@ -47,33 +54,33 @@ public class Login_page extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("LOGIN PAGE");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 40, 250, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, 250, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("User Name");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, -1, -1));
+        jLabel2.setText("Email");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, 90, -1));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Password");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, -1, -1));
 
-        jPasswordFieldLogin.setBackground(new java.awt.Color(0, 0, 0));
-        jPasswordFieldLogin.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jPasswordFieldLogin.setForeground(new java.awt.Color(255, 255, 255));
-        jPasswordFieldLogin.addActionListener(new java.awt.event.ActionListener() {
+        jPassword.setBackground(new java.awt.Color(255, 255, 255));
+        jPassword.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jPassword.setForeground(new java.awt.Color(0, 0, 0));
+        jPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordFieldLoginActionPerformed(evt);
+                jPasswordActionPerformed(evt);
             }
         });
-        jPanel1.add(jPasswordFieldLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 210, 250, 30));
+        jPanel1.add(jPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 210, 250, 30));
 
-        jtxtUserName.setBackground(new java.awt.Color(0, 0, 0));
-        jtxtUserName.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel1.add(jtxtUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 142, 250, 30));
+        jtxtEmail.setBackground(new java.awt.Color(255, 255, 255));
+        jtxtEmail.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel1.add(jtxtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 142, 250, 30));
 
-        jbtnCancel.setBackground(new java.awt.Color(0, 102, 102));
+        jbtnCancel.setBackground(new java.awt.Color(0, 153, 153));
         jbtnCancel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jbtnCancel.setForeground(new java.awt.Color(0, 0, 0));
         jbtnCancel.setText("Cancel");
@@ -84,18 +91,18 @@ public class Login_page extends javax.swing.JFrame {
         });
         jPanel1.add(jbtnCancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 310, 100, -1));
 
-        jbtnSignin.setBackground(new java.awt.Color(0, 102, 102));
+        jbtnSignin.setBackground(new java.awt.Color(0, 153, 153));
         jbtnSignin.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jbtnSignin.setForeground(new java.awt.Color(0, 0, 0));
-        jbtnSignin.setText("SignIn");
+        jbtnSignin.setText("SING IN");
         jbtnSignin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnSigninActionPerformed(evt);
             }
         });
-        jPanel1.add(jbtnSignin, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 60, -1, -1));
+        jPanel1.add(jbtnSignin, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 50, -1, -1));
 
-        jbtnlogin.setBackground(new java.awt.Color(0, 102, 102));
+        jbtnlogin.setBackground(new java.awt.Color(0, 153, 153));
         jbtnlogin.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jbtnlogin.setForeground(new java.awt.Color(0, 0, 0));
         jbtnlogin.setText("lOGIN");
@@ -121,9 +128,9 @@ public class Login_page extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jPasswordFieldLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordFieldLoginActionPerformed
+    private void jPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordFieldLoginActionPerformed
+    }//GEN-LAST:event_jPasswordActionPerformed
 
     private void jbtnSigninActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnSigninActionPerformed
         Singin_page sin = new Singin_page();
@@ -137,8 +144,60 @@ public class Login_page extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnCancelActionPerformed
 
     private void jbtnloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnloginActionPerformed
-        home_page home = new home_page();
-        home.setVisible(true);
+       String email, password, query, passDb = null;
+        String SUrl, SUser, SPassword;
+        SUrl = "jdbc:MySQL://localhost:4306/sms";
+        SUser = "root";
+        SPassword = "";
+        int notFound = 0;
+        
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection(SUrl, SUser, SPassword);
+            Statement st = con.createStatement();
+            
+            
+            if("".equals(jtxtEmail.getText())){
+            JOptionPane.showMessageDialog(new JFrame(), "Full Name is require", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+            
+            else if("".equals(jPassword.getText())){
+            JOptionPane.showMessageDialog(new JFrame(), "Email is require", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+           
+            else{
+                email = jtxtEmail.getText();
+                password = jPassword.getText();
+               
+                
+                query = "SELECT * FROM user WHERE email='"+email+"'";
+                ResultSet rs = st.executeQuery(query);
+                
+                while(rs.next()){
+                    passDb = rs.getString("password");
+                    notFound = 1;
+                }
+                
+                if (notFound == 1 && password.equals(passDb)){
+                    home_page home = new home_page();
+                    home.setVisible(true);
+                    home.pack();
+                    home.setLocationRelativeTo(null);
+                    this.dispose();
+                }
+                
+                else{
+                    JOptionPane.showMessageDialog(new JFrame(), "Incorrect Email or Password", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+                
+                jPassword.setText("");
+        
+                
+            }
+        }
+        catch(Exception e){
+            System.out.println("Error" + e.getMessage());
+        }
         
         this.dispose();
     }//GEN-LAST:event_jbtnloginActionPerformed
@@ -184,10 +243,10 @@ public class Login_page extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordFieldLogin;
+    private javax.swing.JPasswordField jPassword;
     private javax.swing.JButton jbtnCancel;
     private javax.swing.JButton jbtnSignin;
     private javax.swing.JButton jbtnlogin;
-    private javax.swing.JTextField jtxtUserName;
+    private javax.swing.JTextField jtxtEmail;
     // End of variables declaration//GEN-END:variables
 }

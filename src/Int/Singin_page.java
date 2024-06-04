@@ -4,6 +4,14 @@
  */
 package Int;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import static javax.swing.JOptionPane.showMessageDialog;
+
 /**
  *
  * @author USER
@@ -26,31 +34,163 @@ public class Singin_page extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jtxtFulName = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jtxtEmail = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        jPassword = new javax.swing.JPasswordField();
+        jbtnSingUp = new javax.swing.JButton();
+        jbtnLogin = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setText("Sign In");
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setText("Sing Up");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 30, -1, -1));
+
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("Full Name");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, 60, 20));
+
+        jtxtFulName.setBackground(new java.awt.Color(255, 255, 255));
+        jtxtFulName.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jtxtFulName.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel1.add(jtxtFulName, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, 280, 30));
+
+        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setText("Email");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, 50, 20));
+
+        jtxtEmail.setBackground(new java.awt.Color(255, 255, 255));
+        jtxtEmail.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jtxtEmail.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel1.add(jtxtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, 280, 30));
+
+        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setText("Password");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 280, 60, 20));
+
+        jPassword.setBackground(new java.awt.Color(255, 255, 255));
+        jPassword.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jPassword.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel1.add(jPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, 280, 30));
+
+        jbtnSingUp.setBackground(new java.awt.Color(0, 153, 153));
+        jbtnSingUp.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jbtnSingUp.setForeground(new java.awt.Color(0, 0, 0));
+        jbtnSingUp.setText("Sing Up");
+        jbtnSingUp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnSingUpActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jbtnSingUp, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 360, 90, 30));
+
+        jbtnLogin.setBackground(new java.awt.Color(0, 153, 153));
+        jbtnLogin.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jbtnLogin.setForeground(new java.awt.Color(0, 0, 0));
+        jbtnLogin.setText("Login");
+        jbtnLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnLoginActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jbtnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 382, 70, 30));
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel5.setText("I've an account");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 390, -1, 20));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(152, 152, 152)
-                .addComponent(jLabel1)
-                .addContainerGap(211, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 454, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addComponent(jLabel1)
-                .addContainerGap(251, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 430, Short.MAX_VALUE)
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jbtnSingUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnSingUpActionPerformed
+        //System.out.println("Sing up button checked");
+        String fullname, email, password, query;
+        String SUrl, SUser, SPassword;
+        SUrl = "jdbc:MySQL://localhost:4306/sms";
+        SUser = "root";
+        SPassword = "";
+        
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection(SUrl, SUser, SPassword);
+            Statement st = con.createStatement();
+            
+            
+            if("".equals(jtxtFulName.getText())){
+            JOptionPane.showMessageDialog(new JFrame(), "Full Name is require", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+            
+            else if("".equals(jtxtEmail.getText())){
+            JOptionPane.showMessageDialog(new JFrame(), "Email is require", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+            
+            else if("".equals(jPassword.getText())){
+            JOptionPane.showMessageDialog(new JFrame(), "Password is require", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+            
+            else{
+                fullname = jtxtFulName.getText();
+                email = jtxtEmail.getText();
+                password = jPassword.getText();
+                /*System.out.println(fullname);
+                System.out.println(email);
+                System.out.println(password);*/
+                
+                query = "INSERT INTO user(fullname, email, password)"+"VALUES('"+fullname+"', '"+email+"', '"+password+"')";
+                
+                st.execute(query);
+                jtxtFulName.setText("");
+                jtxtEmail.setText("");
+                jPassword.setText("");
+                
+                showMessageDialog(null,"Account has been created successfully!");
+            }
+        }
+        catch(Exception e){
+            System.out.println("Error" + e.getMessage());
+        }
+        
+    }//GEN-LAST:event_jbtnSingUpActionPerformed
+
+    private void jbtnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnLoginActionPerformed
+        
+        Login_page login = new Login_page();
+        login.setVisible(true);
+        
+        this.dispose();
+    }//GEN-LAST:event_jbtnLoginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -89,5 +229,15 @@ public class Singin_page extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPasswordField jPassword;
+    private javax.swing.JButton jbtnLogin;
+    private javax.swing.JButton jbtnSingUp;
+    private javax.swing.JTextField jtxtEmail;
+    private javax.swing.JTextField jtxtFulName;
     // End of variables declaration//GEN-END:variables
 }

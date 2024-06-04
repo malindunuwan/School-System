@@ -30,28 +30,26 @@ public class home_page extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jbtnTeacher = new javax.swing.JButton();
         jbtnPrincipal = new javax.swing.JButton();
+        jbtnTeacher = new javax.swing.JButton();
         jbtnStudent = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        jlblPrincipal = new javax.swing.JLabel();
+        jlblTeachers = new javax.swing.JLabel();
+        jlblStudents = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Home");
-
-        jbtnTeacher.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Teacher1.jpg"))); // NOI18N
-        jbtnTeacher.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbtnTeacherActionPerformed(evt);
-            }
-        });
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 40, -1, -1));
 
         jbtnPrincipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Principal.jpg"))); // NOI18N
         jbtnPrincipal.addActionListener(new java.awt.event.ActionListener() {
@@ -59,71 +57,69 @@ public class home_page extends javax.swing.JFrame {
                 jbtnPrincipalActionPerformed(evt);
             }
         });
+        jPanel2.add(jbtnPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 201, 200));
 
+        jbtnTeacher.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Teacher1.jpg"))); // NOI18N
+        jbtnTeacher.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnTeacherActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jbtnTeacher, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 179, 200, 200));
+
+        jbtnStudent.setBackground(new java.awt.Color(255, 255, 255));
         jbtnStudent.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/Student2.jpg"))); // NOI18N
+        jbtnStudent.setBorder(null);
         jbtnStudent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnStudentActionPerformed(evt);
             }
         });
+        jPanel2.add(jbtnStudent, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 140, 171, 240));
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("Princpal");
+        jlblPrincipal.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jlblPrincipal.setForeground(new java.awt.Color(0, 0, 0));
+        jlblPrincipal.setText("Princpal");
+        jlblPrincipal.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jlblPrincipalMouseClicked(evt);
+            }
+        });
+        jPanel2.add(jlblPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 390, -1, -1));
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("Teachers");
+        jlblTeachers.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jlblTeachers.setForeground(new java.awt.Color(0, 0, 0));
+        jlblTeachers.setText("Teachers");
+        jlblTeachers.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jlblTeachersMouseClicked(evt);
+            }
+        });
+        jPanel2.add(jlblTeachers, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 390, -1, -1));
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel4.setText("Students");
+        jlblStudents.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jlblStudents.setForeground(new java.awt.Color(0, 0, 0));
+        jlblStudents.setText("Students");
+        jlblStudents.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jlblStudentsMouseClicked(evt);
+            }
+        });
+        jPanel2.add(jlblStudents, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 390, -1, -1));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(299, 299, 299)
-                        .addComponent(jLabel1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addComponent(jbtnPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(53, 53, 53)
-                        .addComponent(jbtnTeacher, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(61, 61, 61)
-                        .addComponent(jbtnStudent, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(78, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(89, 89, 89)
-                .addComponent(jLabel2)
-                .addGap(168, 168, 168)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel4)
-                .addGap(131, 131, 131))
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 792, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(56, 56, 56)
-                .addComponent(jLabel1)
-                .addGap(58, 58, 58)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jbtnPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jbtnTeacher, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addGap(41, 41, 41)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4))
-                .addContainerGap(79, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jbtnStudent, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(135, 135, 135))
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 515, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -138,10 +134,11 @@ public class home_page extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbtnStudentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnStudentActionPerformed
@@ -164,6 +161,27 @@ public class home_page extends javax.swing.JFrame {
        
        this.dispose();
     }//GEN-LAST:event_jbtnTeacherActionPerformed
+
+    private void jlblPrincipalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlblPrincipalMouseClicked
+        principal_page principal = new principal_page();
+        principal.setVisible(true);
+        
+        this.dispose();
+    }//GEN-LAST:event_jlblPrincipalMouseClicked
+
+    private void jlblTeachersMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlblTeachersMouseClicked
+        teacher_page teacher = new teacher_page();
+        teacher.setVisible(true);
+        
+        this.dispose();
+    }//GEN-LAST:event_jlblTeachersMouseClicked
+
+    private void jlblStudentsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlblStudentsMouseClicked
+        student_page student = new student_page();
+        student.setVisible(true);
+        
+        this.dispose();
+    }//GEN-LAST:event_jlblStudentsMouseClicked
 
     /**
      * @param args the command line arguments
@@ -202,12 +220,13 @@ public class home_page extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JButton jbtnPrincipal;
     private javax.swing.JButton jbtnStudent;
     private javax.swing.JButton jbtnTeacher;
+    private javax.swing.JLabel jlblPrincipal;
+    private javax.swing.JLabel jlblStudents;
+    private javax.swing.JLabel jlblTeachers;
     // End of variables declaration//GEN-END:variables
 }

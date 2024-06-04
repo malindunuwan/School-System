@@ -26,21 +26,219 @@ public class student_info_page extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jlblGuardiansName = new javax.swing.JLabel();
+        jlblTelNo = new javax.swing.JLabel();
+        jlblAdmissionDate = new javax.swing.JLabel();
+        jlblGender = new javax.swing.JLabel();
+        jlblBirthday = new javax.swing.JLabel();
+        jlblClass = new javax.swing.JLabel();
+        jlblGrade = new javax.swing.JLabel();
+        jlblAge = new javax.swing.JLabel();
+        jlblAddress = new javax.swing.JLabel();
+        jlblName = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jbtnHome = new javax.swing.JButton();
+        jbtnCancel = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jtxtID = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("Tel No");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 510, 170, -1));
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setText("ID");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 170, -1));
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setText("Name");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 170, -1));
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel5.setText("Address");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 170, -1));
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel6.setText("Age");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 170, -1));
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel7.setText("Grade");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 170, -1));
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel8.setText("Gender");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, 170, -1));
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel9.setText("Birthday");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 170, -1));
+
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel10.setText("Admission Date");
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, 170, -1));
+
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel11.setText("Guardian's Name");
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 470, 170, -1));
+
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel12.setText("Class");
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, 170, -1));
+
+        jlblGuardiansName.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jPanel1.add(jlblGuardiansName, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 470, 180, 20));
+
+        jlblTelNo.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jPanel1.add(jlblTelNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 510, 180, 20));
+
+        jlblAdmissionDate.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jPanel1.add(jlblAdmissionDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 430, 180, 20));
+
+        jlblGender.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jPanel1.add(jlblGender, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 390, 180, 20));
+
+        jlblBirthday.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jPanel1.add(jlblBirthday, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 350, 180, 20));
+
+        jlblClass.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jPanel1.add(jlblClass, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 310, 180, 20));
+
+        jlblGrade.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jPanel1.add(jlblGrade, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 270, 180, 20));
+
+        jlblAge.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jPanel1.add(jlblAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 230, 180, 20));
+
+        jlblAddress.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jlblAddress.addHierarchyListener(new java.awt.event.HierarchyListener() {
+            public void hierarchyChanged(java.awt.event.HierarchyEvent evt) {
+                jlblAddressHierarchyChanged(evt);
+            }
+        });
+        jPanel1.add(jlblAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, 180, 20));
+
+        jlblName.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jPanel1.add(jlblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 150, 180, 20));
+
+        jButton1.setBackground(new java.awt.Color(0, 153, 153));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(0, 0, 0));
+        jButton1.setText("Table");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 260, 80, -1));
+
+        jbtnHome.setBackground(new java.awt.Color(0, 153, 153));
+        jbtnHome.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jbtnHome.setForeground(new java.awt.Color(51, 51, 51));
+        jbtnHome.setText("Home");
+        jbtnHome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnHomeActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jbtnHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 360, 80, -1));
+
+        jbtnCancel.setBackground(new java.awt.Color(0, 153, 153));
+        jbtnCancel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jbtnCancel.setForeground(new java.awt.Color(51, 51, 51));
+        jbtnCancel.setText("Cancel");
+        jbtnCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnCancelActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jbtnCancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 460, 80, -1));
+
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setText("Student Information");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 30, -1, -1));
+
+        jtxtID.setBackground(new java.awt.Color(255, 255, 255));
+        jtxtID.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jtxtID.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel1.add(jtxtID, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 110, 240, -1));
+
+        jButton2.setBackground(new java.awt.Color(0, 153, 153));
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(0, 0, 0));
+        jButton2.setText("Search");
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 110, 90, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 626, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 573, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jlblAddressHierarchyChanged(java.awt.event.HierarchyEvent evt) {//GEN-FIRST:event_jlblAddressHierarchyChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jlblAddressHierarchyChanged
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        student_table_page student_table = new student_table_page();
+        student_table.setVisible(true);
+        
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jbtnHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnHomeActionPerformed
+        home_page home = new home_page();
+        home.setVisible(true);
+        home.pack();
+        home.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_jbtnHomeActionPerformed
+
+    private void jbtnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnCancelActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_jbtnCancelActionPerformed
 
     /**
      * @param args the command line arguments
@@ -81,5 +279,33 @@ public class student_info_page extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton jbtnCancel;
+    private javax.swing.JButton jbtnHome;
+    private javax.swing.JLabel jlblAddress;
+    private javax.swing.JLabel jlblAdmissionDate;
+    private javax.swing.JLabel jlblAge;
+    private javax.swing.JLabel jlblBirthday;
+    private javax.swing.JLabel jlblClass;
+    private javax.swing.JLabel jlblGender;
+    private javax.swing.JLabel jlblGrade;
+    private javax.swing.JLabel jlblGuardiansName;
+    private javax.swing.JLabel jlblName;
+    private javax.swing.JLabel jlblTelNo;
+    private javax.swing.JTextField jtxtID;
     // End of variables declaration//GEN-END:variables
 }

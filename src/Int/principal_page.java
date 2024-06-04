@@ -41,9 +41,10 @@ public class principal_page extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jlblName = new javax.swing.JLabel();
-        jbtnChange = new javax.swing.JButton();
+        jbtnTable = new javax.swing.JButton();
         jbtnHomePage = new javax.swing.JButton();
         jbtnCancel = new javax.swing.JButton();
+        jbtnChange1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -124,18 +125,18 @@ public class principal_page extends javax.swing.JFrame {
         jlblName.setForeground(new java.awt.Color(0, 0, 0));
         jPanel1.add(jlblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, 210, 30));
 
-        jbtnChange.setBackground(new java.awt.Color(255, 255, 255));
-        jbtnChange.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jbtnChange.setForeground(new java.awt.Color(0, 0, 0));
-        jbtnChange.setText("Change");
-        jbtnChange.addActionListener(new java.awt.event.ActionListener() {
+        jbtnTable.setBackground(new java.awt.Color(0, 153, 153));
+        jbtnTable.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jbtnTable.setForeground(new java.awt.Color(0, 0, 0));
+        jbtnTable.setText("Table");
+        jbtnTable.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbtnChangeActionPerformed(evt);
+                jbtnTableActionPerformed(evt);
             }
         });
-        jPanel1.add(jbtnChange, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 260, 110, -1));
+        jPanel1.add(jbtnTable, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 290, 110, -1));
 
-        jbtnHomePage.setBackground(new java.awt.Color(255, 255, 255));
+        jbtnHomePage.setBackground(new java.awt.Color(0, 153, 153));
         jbtnHomePage.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jbtnHomePage.setForeground(new java.awt.Color(0, 0, 0));
         jbtnHomePage.setText("Home Page");
@@ -144,9 +145,9 @@ public class principal_page extends javax.swing.JFrame {
                 jbtnHomePageActionPerformed(evt);
             }
         });
-        jPanel1.add(jbtnHomePage, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 330, -1, -1));
+        jPanel1.add(jbtnHomePage, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 360, -1, -1));
 
-        jbtnCancel.setBackground(new java.awt.Color(255, 255, 255));
+        jbtnCancel.setBackground(new java.awt.Color(0, 153, 153));
         jbtnCancel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jbtnCancel.setForeground(new java.awt.Color(0, 0, 0));
         jbtnCancel.setText("Cancel");
@@ -155,7 +156,18 @@ public class principal_page extends javax.swing.JFrame {
                 jbtnCancelActionPerformed(evt);
             }
         });
-        jPanel1.add(jbtnCancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 400, 110, -1));
+        jPanel1.add(jbtnCancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 420, 110, -1));
+
+        jbtnChange1.setBackground(new java.awt.Color(0, 153, 153));
+        jbtnChange1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jbtnChange1.setForeground(new java.awt.Color(0, 0, 0));
+        jbtnChange1.setText("Change");
+        jbtnChange1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnChange1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jbtnChange1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 230, 110, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -165,7 +177,7 @@ public class principal_page extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 458, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 480, Short.MAX_VALUE)
         );
 
         pack();
@@ -179,16 +191,20 @@ public class principal_page extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jbtnHomePageActionPerformed
 
-    private void jbtnChangeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnChangeActionPerformed
-        principal_Profile_page principal1 = new principal_Profile_page();
-        principal1.setVisible(true);
+    private void jbtnTableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnTableActionPerformed
+        principal_table principal1table = new principal_table();
+        principal1table.setVisible(true);
         
         this.dispose();
-    }//GEN-LAST:event_jbtnChangeActionPerformed
+    }//GEN-LAST:event_jbtnTableActionPerformed
 
     private void jbtnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnCancelActionPerformed
         this.setVisible(false);
     }//GEN-LAST:event_jbtnCancelActionPerformed
+
+    private void jbtnChange1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnChange1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbtnChange1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -237,8 +253,9 @@ public class principal_page extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton jbtnCancel;
-    private javax.swing.JButton jbtnChange;
+    private javax.swing.JButton jbtnChange1;
     private javax.swing.JButton jbtnHomePage;
+    private javax.swing.JButton jbtnTable;
     private javax.swing.JLabel jlblAddress;
     private javax.swing.JLabel jlblAge;
     private javax.swing.JLabel jlblGender;
